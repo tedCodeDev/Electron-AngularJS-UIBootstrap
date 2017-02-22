@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<!--
+ * File: index.html
+ * Author: Theodore J. Mike
+ * Created: 2/21/2017
+ * Update: 2/21/2017
+ * Description: entry page to Electron-AngularJS-UIBootstrap boilerplate
+ * Notes:
+-->
+
+<html lang="en" ng-app="boilerplate">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Electron-AngularJS-UIBootstrap Boilerplate</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="styles/import/bootstrap.min.css" rel="stylesheet">
+  <link href="styles/import/bootstrap-theme.min.css" rel="stylesheet">
+
+	<!-- app CSS -->
+	<link rel="stylesheet" href="/styles/app.css" />
+</head>
+<body ng-controller="appController">
+
+  <!-- Start: custom content -->
+  <header></header>
+	<main>
+		<div class="container">
+      
+      <h1 class="display-4">Hello, World!</h1>
+      <h2 ng-bind="angularTest"></h2>
+      <section>
+        <h3>Using:</h3>
+        <ul>
+          <li>Node: <script>document.write(process.versions.node)</script></li>
+          <li>Chrome: <script>document.write(process.versions.chrome)</script></li>
+          <li>Electron: <script>document.write(process.versions.electron)</script></li>
+          <li>AngularJS: 1.6.1</li>
+          <li>UI Bootstrap: 2.5.0</li>
+          <li>Bootstrap: 3.3.7</li>
+        </ul>
+      </section>
+
+      <button type="button" class="btn btn-primary" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">UI Bootstrap...</button>
+      <hr />
+      <div uib-collapse="isCollapsed">
+        <div class="well well-lg">
+          ...is working!
+        </div>
+      </div>
+
+		</div>
+  </main>
+	<footer></footer>
+  <!-- End: custom content -->
+
+	<!-- Placed at the end of the document so the pages load faster -->
+  <script src="scripts/import/angular.min.js"></script>
+  <script src="scripts/import/angular-route.min.js"></script>
+  <script src="scripts/import/angular-animate.min.js"></script>
+  <script src="scripts/import/angular-touch.min.js"></script>
+  <script src="scripts/import/ui-bootstrap-tpls-2.5.0.min.js"></script>
+	<script src="scripts/app.js"></script>
+
+</body>
+</html>
